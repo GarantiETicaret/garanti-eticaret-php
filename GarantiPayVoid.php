@@ -75,7 +75,7 @@
     $request->Card->Number = "";
    
 	$request->Customer=new Customer();
-	$request->Customer->EmailAddr = "fatih@codevist.com";
+	$request->Customer->EmailAddress = "eticaret@garanti.com.tr";
 	$request->Customer->IPAddress = "127.0.0.1";
    
 	$request->Order=new Order();

@@ -30,30 +30,7 @@
                 </select>
             </div>
         </div>
-        <div class="form-group">
-            <label class="col-md-4 control-label" for="">  Kart Numarası:</label>
-            <div class="col-md-4">
-                <input value="4282209004348015" name="creditCardNo" class="form-control input-md">
-            </div>
-        </div>
-        <div class="form-group">
-            <label class="col-md-4 control-label" for="">  Son Kullanma Tarihi / Ay: </label>
-            <div class="col-md-4">
-                <input value="08 " name="expireMonth" class="form-control input-md">
-            </div>
-        </div>
-        <div class="form-group">
-            <label class="col-md-4 control-label" for="">  Son Kullanma Tarihi / Yıl: </label>
-            <div class="col-md-4">
-                <input value="22 " name="expireYear" class="form-control input-md">
-            </div>
-        </div>
-        <div class="form-group">
-            <label class="col-md-4 control-label" for="">  CVC: </label>
-            <div class="col-md-4">
-                <input value="123" name="cvv" class="form-control input-md">
-            </div>
-        </div>
+       
         <div class="form-group">
             <label class="col-md-4 control-label" for="">  OrderID:</label>
             <div class="col-md-4">
@@ -108,13 +85,9 @@
 	$request->txncurrencycode = "949";
 	$request->storekey = "12345678";
 	$request->txntimestamp = date("d-m-Y H:i:s");
-	$request->cardnumber = $_POST["creditCardNo"];
-	$request->cardexpiredatemonth = $_POST["expireMonth"];
-	$request->cardexpiredateyear = $_POST["expireYear"];
-	$request->cardcvv2 = $_POST["cvv"];
 	$request->lang = "tr";
-	$request->refreshtime = "5";
-	
+	$request->refreshtime = "10";
+	$request->companyname = "deneme";
     
     $request->secure3dhash=Sale3DOOSPayRequest::Compute3DHash($request,$settings3D);
     $response = Sale3DOOSPayRequest::execute($request,$settings3D); //Sale3DOOSPayRequest servisi başlatılması için gerekli servis çağırısını temsil eder.

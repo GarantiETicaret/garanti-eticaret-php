@@ -117,7 +117,7 @@
     $request->Mode = $settings->Mode;
 
     $request->Customer = new Customer();
-    $request->Customer->EmailAddr="fatih@codevist.com";
+    $request->Customer->EmailAddress="eticaret@garanti.com.tr";
     $request->Customer->IPAddress="127.0.0.1";
 
     $request->Card = new Card();
@@ -134,6 +134,7 @@
     $request->Terminal->UserID=$terminal->UserID;
     $request->Terminal->ID=$terminal->ID;
     $request->Terminal->MerchantID=$terminal->MerchantID;
+	
     $request->Transaction = new Transaction();
     $request->Transaction->Amount=$_POST["transactionAmount"];
     $request->Transaction->Type="sales";
@@ -144,7 +145,9 @@
     $request->FrequencyType== "D"; // tekrar tipi girilir. Günlük: D, Haftalık: W, Aylık: M, Yıllık: Y
     $request->Type== "D";// tekrarlı işlem tipi
     $request->StartDate== "20181201"; //YYYYMMGG
-
+	$request->RecurringRetryAttemptCount== "10"; // red alan işlemin kaç gün tekrarlanacağı bilgisi
+	$request->RetryAttemptEmail== "eticaret@garanti.com.tr"; // işlem durumunun gönderileceği adres
+	
     $request->Number="1";
     $request->Amount="1200";
 

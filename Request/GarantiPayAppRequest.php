@@ -47,7 +47,7 @@ class GarantiPayAppRequest extends VPOSRequest
           "    </Terminal>\n" .
           "    <Customer>\n" .
           "       <IPAddress>" .$this->Customer->IPAddress . "</IPAddress>\n" .
-          "       <EmailAddr>" .$this->Customer->EmailAddr . "</EmailAddr>\n" .
+          "       <EmailAddress>" .$this->Customer->EmailAddress . "</EmailAddress>\n" .
           "    </Customer>\n" .
           "    <Card>\n" .
           "       <Number>" .$this->Card->Number . "</Number>\n" .
@@ -78,6 +78,7 @@ class GarantiPayAppRequest extends VPOSRequest
 		  "          <TCKN>" .$this->TCKN . "</TCKN>\n" .
 		  "          <GSMNumber>" .$this->GSMNumber . "</GSMNumber>\n" .
 		  "          <InstallmentOnlyForCommercialCard>" .$this->InstallmentOnlyForCommercialCard . "</InstallmentOnlyForCommercialCard>\n" .
+		  		   "          <ReturnUrl>" .$this->ReturnUrl . "</ReturnUrl>\n" .
 		  "          <TotalInstallmentCount>" .$this->TotalInstallmentCount . "</TotalInstallmentCount>\n" .
 		  "    	   <GPInstallments>\n" .
 		  "             <Installment>\n" .

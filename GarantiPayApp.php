@@ -104,7 +104,7 @@
     $request->Card->Number = "";
    
 	$request->Customer=new Customer();
-	$request->Customer->EmailAddr = "fatih@codevist.com";
+	$request->Customer->EmailAddress = "eticaret@garanti.com.tr";
 	$request->Customer->IPAddress = "127.0.0.1";
    
 	$request->Order=new Order();
@@ -130,12 +130,13 @@
 	$request->GSMNumber = ($_POST["gsmNumber"] == null ? "" : $_POST["gsmNumber"]);
 	$request->InstallmentOnlyForCommercialCard = "N";
 	$request->TotalInstallmentCount = "2";
+	$request->ReturnUrl = "https://abc.abc.com/abc";	
 	
 	$request->Transaction=new Transaction();
 	$request->Transaction->Amount = $_POST["transactionAmount"];
 	$request->CurrencyCode = 949;
 	$request->CardholderPresentCode = 0;
-	$request->ReturnServerUrl = "";
+	$request->ReturnServerUrl = "https://abc.abc.com/abc";
 	$request->SubType = "sales";
 	$request->Transaction->Type = "gpdatarequest";
 	$request->MotoInd = "N";

@@ -34,7 +34,7 @@ class RecurringSalesRequest extends VPOSRequest
           "    </Terminal>\n" .
           "    <Customer>\n" .
           "       <IPAddress>" .$this->Customer->IPAddress . "</IPAddress>\n" .
-          "       <EmailAddr>" .$this->Customer->EmailAddr . "</EmailAddr>\n" .
+          "       <EmailAddress>" .$this->Customer->EmailAddress . "</EmailAddress>\n" .
           "    </Customer>\n" .
           "    <Card>\n" .
           "       <Number>" .$this->Card->Number . "</Number>\n" .
@@ -50,6 +50,8 @@ class RecurringSalesRequest extends VPOSRequest
           "         <FrequencyType>" .$this->FrequencyType . "</FrequencyType>\n" .
           "         <FrequencyInterval>" .$this->FrequencyInterval . "</FrequencyInterval>\n" .
           "         <StartDate>" .$this->StartDate . "</StartDate>\n" .
+		  "         <RecurringRetryAttemptCount>" .$this->RecurringRetryAttemptCount . "</RecurringRetryAttemptCount>\n" .
+		  "         <RetryAttemptEmail>" .$this->RetryAttemptEmail . "</RetryAttemptEmail>\n" .
           "       </Recurring>\n" .
           "    </Order>\n" .
           "    <Transaction>\n" .

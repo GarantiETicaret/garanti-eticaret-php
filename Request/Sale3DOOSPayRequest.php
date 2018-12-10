@@ -21,13 +21,10 @@ class Sale3DOOSPayRequest extends VPOSRequest
     public $customeremailaddress;
     public $customeripaddress;
     public $storekey;
-    public $cardnumber;
-    public $cardexpiredatemonth;
-    public $cardexpiredateyear;
-    public $cardcvv2;
     public $txntimestamp;
     public $lang;
     public $refreshtime;
+	public $companyname;
    
 		
     public static function Execute(Sale3DOOSPayRequest $request,Settings3D $settings3D)
@@ -55,12 +52,7 @@ class Sale3DOOSPayRequest extends VPOSRequest
 	  $Data->Add("lang", $request->lang);
 	  $Data->Add("refreshtime",$request->refreshtime);
 	  $Data->Add("txntimestamp",$request->txntimestamp);
-	  $Data->Add("cardnumber", $request->cardnumber);
-	  $Data->Add("cardexpiredatemonth",$request->cardexpiredatemonth);
-	  $Data->Add("cardexpiredateyear",$request->cardexpiredateyear);
-	  $Data->Add("cardcvv2", $request->cardcvv2);
-	  $Data->Add("storekey",$request->storekey);
-
+	  $Data->Add("companyname",$request->companyname);
 	  
         return  $request->PreparePostForm ( $settings3D->BaseUrl, $Data );
     }

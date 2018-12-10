@@ -78,7 +78,7 @@
 			
 			$request->Customer = new Customer();
 
-			$request->Customer->EmailAddr=$secureresponse->customerEmailAddress;
+			$request->Customer->EmailAddress=$secureresponse->customerEmailAddress;
 			$request->Customer->IPAddress=$secureresponse->customerIpAddres;
 			
 			$request->AuthenticationCode=$secureresponse->authenticationCode;

@@ -29,7 +29,7 @@ class FirmRewardSalesRequest extends VPOSRequest
           "    </Terminal>\n" .
           "    <Customer>\n" .
           "       <IPAddress>" .$this->Customer->IPAddress . "</IPAddress>\n" .
-          "       <EmailAddr>" .$this->Customer->EmailAddr . "</EmailAddr>\n" .
+          "       <EmailAddress>" .$this->Customer->EmailAddress . "</EmailAddress>\n" .
           "    </Customer>\n" .
           "    <Card>\n" .
           "       <Number>" .$this->Card->Number . "</Number>\n" .
